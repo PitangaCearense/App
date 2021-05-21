@@ -15,12 +15,12 @@
 		A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A233DCE82657FD060055EAA9 /* App.xcdatamodeld */; };
 		A233DCF52657FD070055EAA9 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A233DCF42657FD070055EAA9 /* AppTests.swift */; };
 		A233DD002657FD070055EAA9 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A233DCFF2657FD070055EAA9 /* AppUITests.swift */; };
-		A233DD11265800E90055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD10265800E90055EAA9 /* File */; };
-		A233DD18265801860055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD17265801860055EAA9 /* File */; };
-		A233DD1A265801950055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD19265801950055EAA9 /* File */; };
-		A233DD1C2658019D0055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1B2658019D0055EAA9 /* File */; };
-		A233DD1E265801A50055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* File */; };
-		A233DD20265801AC0055EAA9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* File */; };
+		A233DD11265800E90055EAA9 /* FileServices in Resources */ = {isa = PBXBuildFile; fileRef = A233DD10265800E90055EAA9 /* FileServices */; };
+		A233DD18265801860055EAA9 /* FileProtocols in Resources */ = {isa = PBXBuildFile; fileRef = A233DD17265801860055EAA9 /* FileProtocols */; };
+		A233DD1A265801950055EAA9 /* FileViewModels in Resources */ = {isa = PBXBuildFile; fileRef = A233DD19265801950055EAA9 /* FileViewModels */; };
+		A233DD1C2658019D0055EAA9 /* FileModels in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1B2658019D0055EAA9 /* FileModels */; };
+		A233DD1E265801A50055EAA9 /* FileComponents in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* FileComponents */; };
+		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +55,12 @@
 		A233DCFB2657FD070055EAA9 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A233DCFF2657FD070055EAA9 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		A233DD012657FD070055EAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A233DD10265800E90055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		A233DD17265801860055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		A233DD19265801950055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		A233DD1B2658019D0055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		A233DD1D265801A50055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		A233DD1F265801AC0055EAA9 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		A233DD10265800E90055EAA9 /* FileServices */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileServices; sourceTree = "<group>"; };
+		A233DD17265801860055EAA9 /* FileProtocols */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileProtocols; sourceTree = "<group>"; };
+		A233DD19265801950055EAA9 /* FileViewModels */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileViewModels; sourceTree = "<group>"; };
+		A233DD1B2658019D0055EAA9 /* FileModels */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileModels; sourceTree = "<group>"; };
+		A233DD1D265801A50055EAA9 /* FileComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileComponents; sourceTree = "<group>"; };
+		A233DD1F265801AC0055EAA9 /* FileView */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		A233DD0D265800B90055EAA9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A233DD10265800E90055EAA9 /* File */,
+				A233DD10265800E90055EAA9 /* FileServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 		A233DD122658011B0055EAA9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A233DD17265801860055EAA9 /* File */,
+				A233DD17265801860055EAA9 /* FileProtocols */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A233DD162658016D0055EAA9 /* Components */,
-				A233DD1F265801AC0055EAA9 /* File */,
+				A233DD1F265801AC0055EAA9 /* FileView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 		A233DD14265801320055EAA9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A233DD19265801950055EAA9 /* File */,
+				A233DD19265801950055EAA9 /* FileViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 		A233DD152658014E0055EAA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A233DD1B2658019D0055EAA9 /* File */,
+				A233DD1B2658019D0055EAA9 /* FileModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 		A233DD162658016D0055EAA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A233DD1D265801A50055EAA9 /* File */,
+				A233DD1D265801A50055EAA9 /* FileComponents */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,6 +212,7 @@
 				A233DCD62657FD040055EAA9 /* Sources */,
 				A233DCD72657FD040055EAA9 /* Frameworks */,
 				A233DCD82657FD040055EAA9 /* Resources */,
+				A233DD212658028A0055EAA9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -305,14 +306,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A233DD18265801860055EAA9 /* File in Resources */,
+				A233DD18265801860055EAA9 /* FileProtocols in Resources */,
 				A233DCE52657FD060055EAA9 /* Preview Assets.xcassets in Resources */,
-				A233DD1E265801A50055EAA9 /* File in Resources */,
-				A233DD1C2658019D0055EAA9 /* File in Resources */,
-				A233DD20265801AC0055EAA9 /* File in Resources */,
+				A233DD1E265801A50055EAA9 /* FileComponents in Resources */,
+				A233DD1C2658019D0055EAA9 /* FileModels in Resources */,
+				A233DD20265801AC0055EAA9 /* FileView in Resources */,
 				A233DCE22657FD060055EAA9 /* Assets.xcassets in Resources */,
-				A233DD11265800E90055EAA9 /* File in Resources */,
-				A233DD1A265801950055EAA9 /* File in Resources */,
+				A233DD11265800E90055EAA9 /* FileServices in Resources */,
+				A233DD1A265801950055EAA9 /* FileViewModels in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +332,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A233DD212658028A0055EAA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A233DCD62657FD040055EAA9 /* Sources */ = {
