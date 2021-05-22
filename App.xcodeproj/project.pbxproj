@@ -21,6 +21,7 @@
 		A233DD1C2658019D0055EAA9 /* FileModels in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1B2658019D0055EAA9 /* FileModels */; };
 		A233DD1E265801A50055EAA9 /* FileComponents in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* FileComponents */; };
 		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
+		D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A233DD1B2658019D0055EAA9 /* FileModels */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileModels; sourceTree = "<group>"; };
 		A233DD1D265801A50055EAA9 /* FileComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileComponents; sourceTree = "<group>"; };
 		A233DD1F265801AC0055EAA9 /* FileView */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileView; sourceTree = "<group>"; };
+		D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInformations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		A233DD0D265800B90055EAA9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0D2642659C3F800E89B3D /* ApiModels */,
 				A233DD10265800E90055EAA9 /* FileServices */,
 			);
 			path = Services;
@@ -200,6 +203,14 @@
 				A233DD1D265801A50055EAA9 /* FileComponents */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D1F0D2642659C3F800E89B3D /* ApiModels */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */,
+			);
+			path = ApiModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 			files = (
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
+				D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */,
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
 			);
