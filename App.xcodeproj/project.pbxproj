@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		A233DD1E265801A50055EAA9 /* FileComponents in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* FileComponents */; };
 		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
 		D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */; };
+		D1F0D2692659C71D00E89B3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D1F0D2682659C71D00E89B3D /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F0D2692659C71D00E89B3D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,9 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				D1F0D2682659C71D00E89B3D /* Alamofire */,
+			);
 			productName = App;
 			productReference = A233DCDA2657FD040055EAA9 /* App.app */;
 			productType = "com.apple.product-type.application";
@@ -301,6 +306,9 @@
 				Base,
 			);
 			mainGroup = A233DCD12657FD040055EAA9;
+			packageReferences = (
+				D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A233DCDB2657FD040055EAA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -532,7 +540,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
-				DEVELOPMENT_TEAM = D56NG2Q3UR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -554,7 +562,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
-				DEVELOPMENT_TEAM = D56NG2Q3UR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -693,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1F0D2682659C71D00E89B3D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A233DCE82657FD060055EAA9 /* App.xcdatamodeld */ = {
