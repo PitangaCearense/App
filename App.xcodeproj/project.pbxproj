@@ -23,6 +23,10 @@
 		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
 		D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */; };
 		D1F0D2692659C71D00E89B3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D1F0D2682659C71D00E89B3D /* Alamofire */; };
+		D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */; };
+		D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */; };
+		D1F0D26F2659CEAE00E89B3D /* RijksmuseumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */; };
+		D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		A233DD1D265801A50055EAA9 /* FileComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileComponents; sourceTree = "<group>"; };
 		A233DD1F265801AC0055EAA9 /* FileView */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileView; sourceTree = "<group>"; };
 		D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInformations.swift; sourceTree = "<group>"; };
+		D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsModel.swift; sourceTree = "<group>"; };
+		D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayModel.swift; sourceTree = "<group>"; };
+		D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumModel.swift; sourceTree = "<group>"; };
+		D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryDBModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +219,10 @@
 			isa = PBXGroup;
 			children = (
 				D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */,
+				D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */,
+				D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */,
+				D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */,
+				D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */,
 			);
 			path = ApiModels;
 			sourceTree = "<group>";
@@ -378,10 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
+				D1F0D26F2659CEAE00E89B3D /* RijksmuseumModel.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
 				D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */,
+				D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */,
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
+				D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
+				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
