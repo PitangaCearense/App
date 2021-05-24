@@ -20,7 +20,7 @@ struct Photos: Codable {
 }
 
 struct SRC: Codable {
-    let medium: String
+    let mediumUrl: String
 }
 
 // MARK: - Video flow
