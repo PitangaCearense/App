@@ -13,6 +13,7 @@ struct RootView: View {
 
     var body: some View {
         configure()
+            .accentColor(Color.white)
             .preferredColorScheme(.dark)
     }
 
@@ -39,6 +40,7 @@ struct RootView: View {
                     NavigationLink("Favorite 3", destination: ContentView())
                 }
             }
+            .accentColor(Color(.systemGray2))
             .listStyle(SidebarListStyle())
             .navigationTitle("Moodboard")
 

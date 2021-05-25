@@ -20,7 +20,7 @@ struct MoodboardView: View {
             self.navigationTitle = "Moodboard"
         } else {
             self.displayMode = .inline
-            self.navigationTitle = "Moodboard of the day"
+            self.navigationTitle = "Moodboard of the Day"
         }
     }
 
@@ -32,6 +32,7 @@ struct MoodboardView: View {
                TextAlert(title: "New Favorite", placeholder: "Name",
                          okButtonText: "Save", cancelButtonText: "Cancel",
                          submitHandler: self.saveFavorite, cancelHandler: self.cancel))
+        .accentColor(.white)
         .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(displayMode)
         .toolbar(content: self.createToolBarMenu)
