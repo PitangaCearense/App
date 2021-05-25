@@ -17,46 +17,36 @@ class ImageAndVideoModelService: ModelServices {
         self.category = category
     }
     
-    func getImageResponse(for url: ApiUrl) -> ImageAndVideoResponseData {
-        var imageResponse: ImageAndVideoResponseData?
+    func getMediaResponse<T: ResponseMediaProtocol>(for url: ApiUrl, model: T.Type, mediaType: MediaType, result: @escaping  (Result<ImageAndVideoResponseData,NetworkErrors>) -> ()) {
         setParametersAndHeaders(for: url)
         
-        if url == ApiUrl.pexelsImage {
-            AF.request(url.rawValue, parameters: parameters, headers: headers).responseDecodable(of: PexelsModel.self) { response in
-                let apiResponse = try! JSONDecoder().decode(PexelsModel.self, from: response.data!)
-                let randomResponse = apiResponse.photos?.randomElement()
-                imageResponse = ImageAndVideoResponseData(author: randomResponse!.photographer, url: randomResponse!.src.mediumUrl)
+        AF.request(url.rawValue, parameters: parameters, headers: headers).responseDecodable(of: model.self) { response in
+            let apiResponse = try! JSONDecoder().decode(model.self, from: response.data!)
+            
+            var mediaURL: String, author: String
+            
+            switch mediaType {
+            case .image:
+                guard let randomResponse = apiResponse.photos?.randomElement(),
+                      let unwrappedauthor = randomResponse.author else {
+                    result(.failure(.badData))
+                    return
+                }
+                mediaURL = randomResponse.imageSource
+                author = unwrappedauthor
+            case .video:
+                guard let randomResponse = apiResponse.videos?.randomElement(),
+                      let unwrappedauthor = randomResponse.author,
+                      let unwrappedVideoUrl = randomResponse.videoURL else{
+                    result(.failure(.badData))
+                    return
+                }
+                mediaURL = unwrappedVideoUrl
+                author = unwrappedauthor
             }
-        } else if url == ApiUrl.pixabayImage {
-            AF.request(url.rawValue, parameters: parameters, headers: headers).responseDecodable(of: PixabayModel.self) { response in
-                let apiResponse = try! JSONDecoder().decode(PixabayModel.self, from: response.data!)
-                let randomResponse = apiResponse.hits.randomElement()
-                imageResponse = ImageAndVideoResponseData(author: randomResponse!.user!, url: randomResponse!.largeImageURL!)
-            }
+            
+            result(.success(ImageAndVideoResponseData(author: author, url: mediaURL)))
         }
-        
-        return imageResponse!
-    }
-    
-    func getVideoResponse(for url: ApiUrl) -> ImageAndVideoResponseData {
-        var videoResponse: ImageAndVideoResponseData?
-        setParametersAndHeaders(for: url)
-        
-        if url == ApiUrl.pexelsVideo {
-            AF.request(url.rawValue, parameters: parameters, headers: headers).responseDecodable(of: PexelsModel.self) { response in
-                let apiResponse = try! JSONDecoder().decode(PexelsModel.self, from: response.data!)
-                let randomResponse = apiResponse.videos?.randomElement()
-                videoResponse = ImageAndVideoResponseData(author: randomResponse!.user.name, url: randomResponse!.video_files.first!.link)
-            }
-        } else if url == ApiUrl.pixabayVideo {
-            AF.request(url.rawValue, parameters: parameters, headers: headers).responseDecodable(of: PixabayModel.self) { response in
-                let apiResponse = try! JSONDecoder().decode(PixabayModel.self, from: response.data!)
-                let randomResponse = apiResponse.hits.randomElement()
-                videoResponse = ImageAndVideoResponseData(author: randomResponse!.user!, url: (randomResponse!.videos?.medium.url)!)
-            }
-        }
-        
-        return videoResponse!
     }
     
     private func setParametersAndHeaders(for url: ApiUrl) {
@@ -69,4 +59,14 @@ class ImageAndVideoModelService: ModelServices {
             headers = []
         }
     }
+}
+
+enum NetworkErrors: Error {
+    case wrongURL
+    case badData
+}
+
+enum MediaType {
+    case video
+    case image
 }

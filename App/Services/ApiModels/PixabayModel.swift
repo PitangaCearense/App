@@ -7,14 +7,22 @@
 
 import Foundation
 
-struct PixabayModel: Codable {
-    let hits: [Hit]
+struct PixabayModel: ResponseMediaProtocol, Codable {
+    var videos: [Hit]? { return hits?.filter { $0.videos != nil } }
+    var photos: [Hit]? { return hits?.filter { $0.largeImageURL != nil } }
+    
+    var hits: [Hit]?
 }
 
-struct Hit: Codable {
+struct Hit: MediaInformation, VideoData, ImageData, Codable {
+    
     let user: String?
     let largeImageURL: String?
     let videos: QualityOfVideos?
+    
+    var author: String? { return user }
+    var imageSource: String { largeImageURL ?? "" }
+    var videoURL: String? { videos?.medium.url ?? "" }
 }
 
 struct QualityOfVideos: Codable {

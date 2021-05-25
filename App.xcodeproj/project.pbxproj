@@ -34,6 +34,7 @@
 		D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */; };
 		D1F0D26F2659CEAE00E89B3D /* RijksmuseumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */; };
 		D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */; };
+		D1FF1616265D38FA00ED6A7B /* ResponseMediaProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF1615265D38FA00ED6A7B /* ResponseMediaProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayModel.swift; sourceTree = "<group>"; };
 		D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumModel.swift; sourceTree = "<group>"; };
 		D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryDBModel.swift; sourceTree = "<group>"; };
+		D1FF1615265D38FA00ED6A7B /* ResponseMediaProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMediaProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				A233DD17265801860055EAA9 /* FileProtocols */,
 				D1A2B076265BC97A00DAB80F /* ModelServices.swift */,
+				D1FF1615265D38FA00ED6A7B /* ResponseMediaProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
 				D1A2B075265BC8F900DAB80F /* ImageAndVideoModelService.swift in Sources */,
 				D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */,
+				D1FF1616265D38FA00ED6A7B /* ResponseMediaProtocol.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
 				D1A2B07B265BDFD100DAB80F /* PoetryModelServices.swift in Sources */,
 				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
