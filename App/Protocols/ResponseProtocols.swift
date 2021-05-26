@@ -17,6 +17,7 @@ protocol ResponseMediaProtocol: Codable {
 
 protocol MediaInformation: Codable {
     var author: String? { get }
+    var title: String? { get }
 }
 
 protocol ImageData: Codable {
@@ -25,4 +26,18 @@ protocol ImageData: Codable {
 
 protocol VideoData: Codable {
     var videoURL: String? { get }
+}
+
+protocol ResponsePictureProtocol: Codable {
+    associatedtype Picture: MediaInformation, PictureData
+    
+    var picture: [Picture]? { get }
+}
+
+protocol PictureData: Codable {
+    var pictureUrl: String { get }
+}
+
+protocol ResponsePoetryProtocol: MediaInformation {
+    var lines: [String] { get }
 }

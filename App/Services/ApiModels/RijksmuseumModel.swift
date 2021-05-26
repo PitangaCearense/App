@@ -7,13 +7,18 @@
 
 import Foundation
 
-struct RijksmuseumModel: Codable {
+struct RijksmuseumModel: ResponsePictureProtocol, Codable {
     let artObjects: [ArtObject]
+    
+    var picture: [ArtObject]? { artObjects.filter{ $0.title != nil }}
 }
 
-struct ArtObject: Codable {
-    let title: String
+struct ArtObject: MediaInformation, PictureData, Codable {
+    var author: String?
+    var title: String?
     let webImage: Picture
+    
+    var pictureUrl: String { return webImage.url }
 }
 
 struct Picture: Codable {

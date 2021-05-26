@@ -15,7 +15,7 @@ struct PixabayModel: ResponseMediaProtocol, Codable {
 }
 
 struct Hit: MediaInformation, VideoData, ImageData, Codable {
-    
+    var title: String?
     let user: String?
     let largeImageURL: String?
     let videos: QualityOfVideos?

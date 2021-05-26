@@ -10,5 +10,5 @@ import Foundation
 struct PoetryResponseData {
     let title: String
     let author: String
-    let poetry: String
+    let poetry: Data
 }

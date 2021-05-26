@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PoetryDBModel: Codable {
-    let title: String
-    let author: String
-    let lines: [String]
+struct PoetryDBModel: ResponsePoetryProtocol, Codable {
+    var title: String?
+    var author: String?
+    var lines: [String]
 }

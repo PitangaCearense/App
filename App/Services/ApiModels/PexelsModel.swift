@@ -15,6 +15,7 @@ struct PexelsModel: ResponseMediaProtocol, Codable {
 
 // MARK: - Image flow
 struct Photos: Codable, MediaInformation, ImageData {
+    var title: String?
     let author: String?
     let src: SRC
     
@@ -34,8 +35,9 @@ struct SRC: Codable {
 
 // MARK: - Video flow
 struct Videos: MediaInformation, VideoData, Codable {
+    var title: String?
     var author: String? { return user.name }
-    var imageSource: String
+    //var imageSource: String
     
     let user: User
     var videoURL: String? { video_files.first?.link ?? "" }
