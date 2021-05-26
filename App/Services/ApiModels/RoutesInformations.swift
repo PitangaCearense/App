@@ -44,7 +44,7 @@ enum Routes: String {
 //    }
 }
 
-enum tokens: String {
+enum Tokens: String {
     case pexels = "563492ad6f91700001000001d18b9d0dcabe44ffb5436ad57b3a52ee"
     case pixabay = "21586355-9a53b7219c21f55756e9566af"
     case rijksmuseum = "jCEuqrdy"

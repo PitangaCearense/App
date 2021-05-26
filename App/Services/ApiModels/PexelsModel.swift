@@ -40,8 +40,8 @@ struct Videos: MediaInformation, VideoData, Codable {
     //var imageSource: String
     
     let user: User
-    var videoURL: String? { video_files.first?.link ?? "" }
-    let video_files: [VideosFiles]
+    var videoURL: String? { videoFiles.first?.link ?? "" }
+    let videoFiles: [VideosFiles]
 }
 
 struct User: Codable {
