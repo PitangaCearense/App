@@ -21,6 +21,15 @@
 		A233DD1C2658019D0055EAA9 /* FileModels in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1B2658019D0055EAA9 /* FileModels */; };
 		A233DD1E265801A50055EAA9 /* FileComponents in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* FileComponents */; };
 		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
+		A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF4D265DB6200014C65B /* Content+CoreDataClass.swift */; };
+		A27CCF53265DB63B0014C65B /* CoredataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF52265DB63B0014C65B /* CoredataService.swift */; };
+		A27CCF56265DB6720014C65B /* ContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF55265DB6720014C65B /* ContentRepository.swift */; };
+		A27CCF58265DB6A70014C65B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */; };
+		A27CCF5A265DB6BC0014C65B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */; };
+		A27CCF5D265DBC9A0014C65B /* Moodboard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */; };
+		A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */; };
+		A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */; };
+		A27CCF62265DCC990014C65B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF61265DCC990014C65B /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,15 @@
 		A233DD1B2658019D0055EAA9 /* FileModels */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileModels; sourceTree = "<group>"; };
 		A233DD1D265801A50055EAA9 /* FileComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileComponents; sourceTree = "<group>"; };
 		A233DD1F265801AC0055EAA9 /* FileView */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileView; sourceTree = "<group>"; };
+		A27CCF4D265DB6200014C65B /* Content+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A27CCF52265DB63B0014C65B /* CoredataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataService.swift; sourceTree = "<group>"; };
+		A27CCF55265DB6720014C65B /* ContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepository.swift; sourceTree = "<group>"; };
+		A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardRepository.swift; sourceTree = "<group>"; };
+		A27CCF61265DCC990014C65B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +109,10 @@
 		A233DCD12657FD040055EAA9 = {
 			isa = PBXGroup;
 			children = (
+				A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */,
+				A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */,
+				A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */,
+				A27CCF4D265DB6200014C65B /* Content+CoreDataClass.swift */,
 				A233DCDC2657FD040055EAA9 /* App */,
 				A233DCF32657FD070055EAA9 /* AppTests */,
 				A233DCFE2657FD070055EAA9 /* AppUITests */,
@@ -115,6 +137,7 @@
 				A233DD14265801320055EAA9 /* ViewModels */,
 				A233DD13265801270055EAA9 /* Views */,
 				A233DD122658011B0055EAA9 /* Protocols */,
+				A27CCF54265DB6550014C65B /* Repositories */,
 				A233DD0D265800B90055EAA9 /* Services */,
 				A233DCDD2657FD040055EAA9 /* AppApp.swift */,
 				A233DCDF2657FD040055EAA9 /* ContentView.swift */,
@@ -156,6 +179,7 @@
 		A233DD0D265800B90055EAA9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A27CCF51265DB6290014C65B /* CoredataService */,
 				A233DD10265800E90055EAA9 /* FileServices */,
 			);
 			path = Services;
@@ -165,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A233DD17265801860055EAA9 /* FileProtocols */,
+				A27CCF61265DCC990014C65B /* Repository.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -174,6 +199,7 @@
 			children = (
 				A233DD162658016D0055EAA9 /* Components */,
 				A233DD1F265801AC0055EAA9 /* FileView */,
+				A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +226,23 @@
 				A233DD1D265801A50055EAA9 /* FileComponents */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A27CCF51265DB6290014C65B /* CoredataService */ = {
+			isa = PBXGroup;
+			children = (
+				A27CCF52265DB63B0014C65B /* CoredataService.swift */,
+			);
+			path = CoredataService;
+			sourceTree = "<group>";
+		};
+		A27CCF54265DB6550014C65B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A27CCF55265DB6720014C65B /* ContentRepository.swift */,
+				A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,8 +403,17 @@
 			files = (
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
+				A27CCF5A265DB6BC0014C65B /* SwiftUIView.swift in Sources */,
+				A27CCF62265DCC990014C65B /* Repository.swift in Sources */,
+				A27CCF5D265DBC9A0014C65B /* Moodboard+CoreDataClass.swift in Sources */,
+				A27CCF58265DB6A70014C65B /* Content+CoreDataProperties.swift in Sources */,
+				A27CCF53265DB63B0014C65B /* CoredataService.swift in Sources */,
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
+				A27CCF56265DB6720014C65B /* ContentRepository.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
+				A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */,
+				A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */,
+				A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
