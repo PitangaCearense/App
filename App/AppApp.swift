@@ -13,9 +13,7 @@ struct AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                PreferencesView()
-            }
+            RootView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

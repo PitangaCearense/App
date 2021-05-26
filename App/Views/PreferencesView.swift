@@ -9,12 +9,21 @@ import SwiftUI
 
 struct PreferencesView: View {
 
+    private var displayMode: NavigationBarItem.TitleDisplayMode
+
     let columns = [
         GridItem(.adaptive(minimum: 90), spacing: 35)
     ]
 
-    var body: some View {
+    init() {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.displayMode = .automatic
+        } else {
+            self.displayMode = .inline
+        }
+    }
 
+    var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 0) {
                 ForEach(Category.allCategories.shuffled(), id: \.self) { category in
@@ -26,8 +35,8 @@ struct PreferencesView: View {
             }
             .padding()
         }
-        .background(Color("backgorundColor"))
         .navigationTitle("Preferences")
+        .navigationBarTitleDisplayMode(displayMode)
     }
 }
 
