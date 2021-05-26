@@ -21,6 +21,9 @@
 		A233DD1C2658019D0055EAA9 /* FileModels in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1B2658019D0055EAA9 /* FileModels */; };
 		A233DD1E265801A50055EAA9 /* FileComponents in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1D265801A50055EAA9 /* FileComponents */; };
 		A233DD20265801AC0055EAA9 /* FileView in Resources */ = {isa = PBXBuildFile; fileRef = A233DD1F265801AC0055EAA9 /* FileView */; };
+		A25FDD26265BEE76005689F5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25FDD25265BEE76005689F5 /* Categories.swift */; };
+		A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */; };
+		A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */; };
 		FE126F90265BCCCA0064F11D /* MoodboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F8F265BCCCA0064F11D /* MoodboardView.swift */; };
 		FE126F94265BCDCC0064F11D /* SingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F93265BCDCC0064F11D /* SingleCell.swift */; };
 		FE126F96265BCDDF0064F11D /* DoubleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F95265BCDDF0064F11D /* DoubleCell.swift */; };
@@ -74,6 +77,9 @@
 		A233DD1B2658019D0055EAA9 /* FileModels */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileModels; sourceTree = "<group>"; };
 		A233DD1D265801A50055EAA9 /* FileComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileComponents; sourceTree = "<group>"; };
 		A233DD1F265801AC0055EAA9 /* FileView */ = {isa = PBXFileReference; lastKnownFileType = text; path = FileView; sourceTree = "<group>"; };
+		A25FDD25265BEE76005689F5 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		FE126F8F265BCCCA0064F11D /* MoodboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardView.swift; sourceTree = "<group>"; };
 		FE126F93265BCDCC0064F11D /* SingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCell.swift; sourceTree = "<group>"; };
 		FE126F95265BCDDF0064F11D /* DoubleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCell.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 			children = (
 				A233DD162658016D0055EAA9 /* Components */,
 				A233DD1F265801AC0055EAA9 /* FileView */,
+				A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */,
 				FE126F8F265BCCCA0064F11D /* MoodboardView.swift */,
 				FE126F9F265BEA840064F11D /* RootView.swift */,
 			);
@@ -218,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				A233DD1B2658019D0055EAA9 /* FileModels */,
+				A25FDD25265BEE76005689F5 /* Categories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				FE126F91265BCCEE0064F11D /* Collection */,
 				FE754095265D27370059C0FE /* Blur.swift */,
 				A233DD1D265801A50055EAA9 /* FileComponents */,
+				A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */,
 				FE7540A0265D49A70059C0FE /* Moodboard.swift */,
 			);
 			path = Components;
@@ -421,9 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */,
+				A25FDD26265BEE76005689F5 /* Categories.swift in Sources */,
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
 				FE126F9C265BCE270064F11D /* Collection.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
+				A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */,
 				FE754099265D34140059C0FE /* TextAlert.swift in Sources */,
 				FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */,
 				FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */,

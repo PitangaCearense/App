@@ -10,6 +10,15 @@ import SwiftUI
 struct RootView: View {
 
     private let moodBoardView = MoodboardView()
+    private let preferencesView = PreferencesView()
+
+    init() {
+//        UINavigationBar.appearance().barTintColor = .black
+//        UINavigationBar.appearance().backgroundColor = .black
+//        UINavigationBar.appearance().isTranslucent = false
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+//        UITabBar.appearance().backgroundColor = .black
+    }
 
     var body: some View {
         configure()
@@ -31,7 +40,7 @@ struct RootView: View {
                 NavigationLink(destination: self.moodBoardView) {
                     Label("Moodboard of the Day", systemImage: "square.grid.2x2")
                 }
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: self.preferencesView) {
                     Label("Preferences", systemImage: "gear")
                 }
                 Section(header: Text("Favorites")) {
@@ -51,14 +60,14 @@ struct RootView: View {
     private func createTabBar() -> some View {
         TabView {
             NavigationView { moodBoardView.navigationTitle("Moodboard") }
-            .tabItem {
-                Label("Moodboard", systemImage: "square.grid.2x2")
-            }
+                .tabItem {
+                    Label("Moodboard", systemImage: "square.grid.2x2")
+                }
             NavigationView { ContentView().navigationTitle("Favorites") }
                 .tabItem {
                     Label("Favorites", systemImage: "photo.on.rectangle.angled")
                 }
-            NavigationView { ContentView().navigationTitle("Preferences") }
+            NavigationView { self.preferencesView.navigationTitle("Preferences") }
                 .tabItem {
                     Label("Preferences", systemImage: "gear")
                 }
