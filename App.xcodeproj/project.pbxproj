@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,17 @@
 		A25FDD26265BEE76005689F5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25FDD25265BEE76005689F5 /* Categories.swift */; };
 		A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */; };
 		A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */; };
+		D1A2B075265BC8F900DAB80F /* MediaModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2B074265BC8F900DAB80F /* MediaModelService.swift */; };
+		D1CABB6D2659FC3B00C03F10 /* ImageAndVideoResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB6C2659FC3B00C03F10 /* ImageAndVideoResponseData.swift */; };
+		D1CABB6F2659FC7900C03F10 /* PictureResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB6E2659FC7900C03F10 /* PictureResponseData.swift */; };
+		D1CABB712659FCD300C03F10 /* PoetryResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB702659FCD300C03F10 /* PoetryResponseData.swift */; };
+		D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */; };
+		D1F0D2692659C71D00E89B3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D1F0D2682659C71D00E89B3D /* Alamofire */; };
+		D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */; };
+		D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */; };
+		D1F0D26F2659CEAE00E89B3D /* RijksmuseumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */; };
+		D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */; };
+		D1FF1616265D38FA00ED6A7B /* ResponseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF1615265D38FA00ED6A7B /* ResponseProtocols.swift */; };
 		FE126F90265BCCCA0064F11D /* MoodboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F8F265BCCCA0064F11D /* MoodboardView.swift */; };
 		FE126F94265BCDCC0064F11D /* SingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F93265BCDCC0064F11D /* SingleCell.swift */; };
 		FE126F96265BCDDF0064F11D /* DoubleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F95265BCDDF0064F11D /* DoubleCell.swift */; };
@@ -80,6 +91,16 @@
 		A25FDD25265BEE76005689F5 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		D1A2B074265BC8F900DAB80F /* MediaModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModelService.swift; sourceTree = "<group>"; };
+		D1CABB6C2659FC3B00C03F10 /* ImageAndVideoResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndVideoResponseData.swift; sourceTree = "<group>"; };
+		D1CABB6E2659FC7900C03F10 /* PictureResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureResponseData.swift; sourceTree = "<group>"; };
+		D1CABB702659FCD300C03F10 /* PoetryResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryResponseData.swift; sourceTree = "<group>"; };
+		D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInformations.swift; sourceTree = "<group>"; };
+		D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsModel.swift; sourceTree = "<group>"; };
+		D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayModel.swift; sourceTree = "<group>"; };
+		D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumModel.swift; sourceTree = "<group>"; };
+		D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryDBModel.swift; sourceTree = "<group>"; };
+		D1FF1615265D38FA00ED6A7B /* ResponseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProtocols.swift; sourceTree = "<group>"; };
 		FE126F8F265BCCCA0064F11D /* MoodboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardView.swift; sourceTree = "<group>"; };
 		FE126F93265BCDCC0064F11D /* SingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCell.swift; sourceTree = "<group>"; };
 		FE126F95265BCDDF0064F11D /* DoubleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCell.swift; sourceTree = "<group>"; };
@@ -100,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F0D2692659C71D00E89B3D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +210,8 @@
 		A233DD0D265800B90055EAA9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D1A2B07C265BE21100DAB80F /* Networking */,
+				D1F0D2642659C3F800E89B3D /* ApiModels */,
 				A233DD10265800E90055EAA9 /* FileServices */,
 			);
 			path = Services;
@@ -197,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				A233DD17265801860055EAA9 /* FileProtocols */,
+				D1FF1615265D38FA00ED6A7B /* ResponseProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -241,6 +266,29 @@
 				FE7540A0265D49A70059C0FE /* Moodboard.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D1A2B07C265BE21100DAB80F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D1A2B074265BC8F900DAB80F /* MediaModelService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D1F0D2642659C3F800E89B3D /* ApiModels */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0D2652659C62C00E89B3D /* RoutesInformations.swift */,
+				D1F0D26A2659C94F00E89B3D /* PexelsModel.swift */,
+				D1F0D26C2659CC6100E89B3D /* PixabayModel.swift */,
+				D1F0D26E2659CEAE00E89B3D /* RijksmuseumModel.swift */,
+				D1F0D2702659CF4200E89B3D /* PoetryDBModel.swift */,
+				D1CABB6C2659FC3B00C03F10 /* ImageAndVideoResponseData.swift */,
+				D1CABB6E2659FC7900C03F10 /* PictureResponseData.swift */,
+				D1CABB702659FCD300C03F10 /* PoetryResponseData.swift */,
+			);
+			path = ApiModels;
 			sourceTree = "<group>";
 		};
 		FE126F91265BCCEE0064F11D /* Collection */ = {
@@ -291,6 +339,9 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				D1F0D2682659C71D00E89B3D /* Alamofire */,
+			);
 			productName = App;
 			productReference = A233DCDA2657FD040055EAA9 /* App.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +413,9 @@
 				Base,
 			);
 			mainGroup = A233DCD12657FD040055EAA9;
+			packageReferences = (
+				D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A233DCDB2657FD040055EAA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -430,6 +484,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CABB6D2659FC3B00C03F10 /* ImageAndVideoResponseData.swift in Sources */,
+				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
+				D1F0D26F2659CEAE00E89B3D /* RijksmuseumModel.swift in Sources */,
+				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
+				D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */,
+				D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */,
+				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
+				D1A2B075265BC8F900DAB80F /* MediaModelService.swift in Sources */,
+				D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */,
+				D1FF1616265D38FA00ED6A7B /* ResponseProtocols.swift in Sources */,
+				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
+				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
+				D1CABB6F2659FC7900C03F10 /* PictureResponseData.swift in Sources */,
+				D1CABB712659FCD300C03F10 /* PoetryResponseData.swift in Sources */,
 				A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */,
 				A25FDD26265BEE76005689F5 /* Categories.swift in Sources */,
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
@@ -608,7 +676,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
-				DEVELOPMENT_TEAM = D56NG2Q3UR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -630,7 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
-				DEVELOPMENT_TEAM = D56NG2Q3UR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -769,6 +837,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1F0D2682659C71D00E89B3D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1F0D2672659C71D00E89B3D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A233DCE82657FD060055EAA9 /* App.xcdatamodeld */ = {
