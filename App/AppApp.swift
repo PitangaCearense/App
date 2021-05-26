@@ -13,8 +13,7 @@ struct AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            Text("Hello App")
-            SwiftUIView()
+            RootView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
