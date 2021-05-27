@@ -11,14 +11,14 @@ struct CustomButtonView: View {
     var label: String = ""
     var icon: String = ""
     var color: Color = Color.white
-    var action: (()->Void)?
+    var action: ((_ state: Bool, _ name: String) -> Void)?
 
     private var scale: CGFloat {
         return selected ? 1.0 : 0.85
     }
 
     private var backgroundColor: UIColor {
-        return selected ? UIColor.black : UIColor.gray
+        return selected ? UIColor(self.color) : UIColor.gray
     }
 
     private var iconColor: Color {
@@ -53,7 +53,7 @@ struct CustomButtonView: View {
     var body: some View {
         ZStack {
             Color(backgroundColor)
-                .opacity(0.45)
+                .opacity(0.25)
                 .cornerRadius(26)
                 .frame(width: self.sizeButton, height: self.sizeButton, alignment: .center)
 
@@ -73,7 +73,7 @@ struct CustomButtonView: View {
         .scaleEffect(scale)
         .onTapGesture {
             selected = !selected
-            action?()
+            action?(self.selected, self.label)
         }
     }
 }
