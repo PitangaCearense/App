@@ -18,11 +18,11 @@ struct Photos: Codable, MediaInformation, ImageData {
     var title: String?
     let author: String?
     let src: SRC
-    
+
     var imageSource: String {
         return src.mediumUrl
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case author = "photographer"
         case src

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct FavoritesView: View {
     private var gridAdaptiveLayout = [GridItem(.adaptive(minimum: 160), spacing: 16)]
+    private var viewModel = FavoritesViewModel()
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridAdaptiveLayout, spacing: 16) {
-                ForEach((0...9999), id: \.self) { number in
+                ForEach((0..<viewModel.getNumberOfFavorites()), id: \.self) { number in
                     NavigationLink(destination: ContentView()) {
-                        MiniMoodboard(number: number)
+                        MiniMoodboard(imageUrls: viewModel.getMediaOfFavorite(number: number))
                     }
                 }
             }

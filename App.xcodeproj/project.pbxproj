@@ -28,7 +28,6 @@
 		A27CCF58265DB6A70014C65B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */; };
 		A27CCF5A265DB6BC0014C65B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */; };
 		A27CCF5D265DBC9A0014C65B /* Moodboard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */; };
-		A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */; };
 		A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */; };
 		A27CCF62265DCC990014C65B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF61265DCC990014C65B /* Repository.swift */; };
 		A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */; };
@@ -37,6 +36,8 @@
 		A2F6DF42265EEF5B00F43692 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF41265EEF5B00F43692 /* CategoryRepository.swift */; };
 		A2F6DF44265EFAFB00F43692 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF43265EFAFB00F43692 /* Category+CoreDataProperties.swift */; };
 		A2F6DF46265F112600F43692 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */; };
+		D100245626602DEA002C92A0 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100245526602DEA002C92A0 /* FavoritesViewModel.swift */; };
+		D100245826603292002C92A0 /* Moodboard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100245726603292002C92A0 /* Moodboard+CoreDataProperties.swift */; };
 		D151B1BD26600BB0006BFA8B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D151B1BC26600BB0006BFA8B /* FavoritesView.swift */; };
 		D151B1BF26600CA2006BFA8B /* MiniMoodboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D151B1BE26600CA2006BFA8B /* MiniMoodboard.swift */; };
 		D1A2B075265BC8F900DAB80F /* MediaModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2B074265BC8F900DAB80F /* MediaModelService.swift */; };
@@ -110,7 +111,6 @@
 		A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardRepository.swift; sourceTree = "<group>"; };
 		A27CCF61265DCC990014C65B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -119,6 +119,8 @@
 		A2F6DF41265EEF5B00F43692 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		A2F6DF43265EFAFB00F43692 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		D100245526602DEA002C92A0 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		D100245726603292002C92A0 /* Moodboard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D151B1BC26600BB0006BFA8B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		D151B1BE26600CA2006BFA8B /* MiniMoodboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMoodboard.swift; sourceTree = "<group>"; };
 		D1A2B074265BC8F900DAB80F /* MediaModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModelService.swift; sourceTree = "<group>"; };
@@ -175,10 +177,10 @@
 		A233DCD12657FD040055EAA9 = {
 			isa = PBXGroup;
 			children = (
+				D100245726603292002C92A0 /* Moodboard+CoreDataProperties.swift */,
 				A2F6DF43265EFAFB00F43692 /* Category+CoreDataProperties.swift */,
 				A2F6DF3D265EEB8900F43692 /* Category+CoreDataClass.swift */,
 				A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */,
-				A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */,
 				A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */,
 				A27CCF4D265DB6200014C65B /* Content+CoreDataClass.swift */,
 				A233DCDC2657FD040055EAA9 /* App */,
@@ -284,6 +286,7 @@
 			children = (
 				A233DD19265801950055EAA9 /* FileViewModels */,
 				A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */,
+				D100245526602DEA002C92A0 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -572,9 +575,11 @@
 				A25FDD26265BEE76005689F5 /* CategoryContent.swift in Sources */,
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
 				FE126F9C265BCE270064F11D /* Collection.swift in Sources */,
+				D100245826603292002C92A0 /* Moodboard+CoreDataProperties.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
 				A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */,
 				FE754099265D34140059C0FE /* TextAlert.swift in Sources */,
+				D100245626602DEA002C92A0 /* FavoritesViewModel.swift in Sources */,
 				FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */,
 				FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */,
 				FE126F9A265BCE0D0064F11D /* QuadrupleCell.swift in Sources */,
@@ -591,7 +596,6 @@
 				FE126FA0265BEA840064F11D /* RootView.swift in Sources */,
 				A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */,
 				D151B1BD26600BB0006BFA8B /* FavoritesView.swift in Sources */,
-				A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */,
 				A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */,
 				A2F6DF44265EFAFB00F43692 /* Category+CoreDataProperties.swift in Sources */,
 			);
