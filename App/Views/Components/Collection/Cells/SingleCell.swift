@@ -11,14 +11,14 @@ struct SingleCell<Content: View>: View, Identifiable {
     let index: Int
     var id: Int { index }
 
-    let content: (Int, Int) -> Content
+    let content: Content
 
-    init(_ index: Int, @ViewBuilder _ content: @escaping (Int, Int) -> Content) {
+    init(_ index: Int, content: Content) {
         self.index = index
         self.content = content
     }
 
     var body: some View {
-        content(self.index, 0)
+        content
     }
 }

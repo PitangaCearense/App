@@ -10,14 +10,15 @@ import CoreData
 class MoodboardRepository: Repository {
     let coreDataService: CoredataService<Moodboard> = CoredataService<Moodboard>()
 
-    func create(name: String? = nil, data: [NSManagedObjectID], favorite: Bool = false, moodboardDay: Bool = false) -> Moodboard? {
+    func create(name: String? = nil, data: [NSManagedObjectID],
+                favorite: Bool = false, moodboardDay: Bool = false) -> Moodboard? {
         let moodboard = coreDataService.create()
 
         moodboard?.name = name
         moodboard?.creationDate = Date()
         moodboard?.favorite = favorite
         moodboard?.moodboardDay = moodboardDay
-        moodboard?.data = data as NSObject
+        moodboard?.data = data
 
         _ = coreDataService.save()
         return moodboard
@@ -49,14 +50,14 @@ class MoodboardRepository: Repository {
     }
 
     func moodboardOfTheDay() -> Moodboard? {
-        let predicate = NSPredicate(format: "moodboardDay == %@ AND creationDate == %@", true, Date() as CVarArg)
+        let predicate = NSPredicate(format: "moodboardDay == YES AND creationDate == %@", Date() as CVarArg)
         guard let content = coreDataService.searchFor(predicate: predicate) else {return nil}
 
         return content.first
     }
 
     func getAllFavorites() -> [Moodboard]? {
-        let predicate = NSPredicate(format: "favorite == %@", true)
+        let predicate = NSPredicate(format: "favorite == YES")
         guard let content = coreDataService.searchFor(predicate: predicate) else {return nil}
 
         return content
@@ -83,7 +84,7 @@ class MoodboardRepository: Repository {
             moodboard.moodboardDay = false
             return newMoodboard
         }
-        moodboard.data = newData as NSObject
+        moodboard.data = newData
         return moodboard
     }
 }

@@ -26,7 +26,7 @@ struct PreferencesView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 0) {
-                ForEach(Category.allCategories.shuffled(), id: \.self) { category in
+                ForEach(CategoryContent.allCategories.shuffled(), id: \.self) { category in
                     CustomButtonView(label: category.name,
                                      icon: category.icon,
                                      color: category.categoryColor.color)

@@ -2,7 +2,7 @@
 //  Moodboard+CoreDataProperties.swift
 //  App
 //
-//  Created by José João Silva Nunes Alves on 25/05/21.
+//  Created by Pedro Sousa on 27/05/21.
 //
 //
 
@@ -16,11 +16,11 @@ extension Moodboard {
         return NSFetchRequest<Moodboard>(entityName: "Moodboard")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var favorite: Bool
     @NSManaged public var creationDate: Date?
-    @NSManaged public var data: NSObject?
+    @NSManaged public var data: [NSManagedObjectID]?
+    @NSManaged public var favorite: Bool
     @NSManaged public var moodboardDay: Bool
+    @NSManaged public var name: String?
 
 }
 

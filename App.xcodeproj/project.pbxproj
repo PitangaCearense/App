@@ -28,7 +28,6 @@
 		A27CCF58265DB6A70014C65B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */; };
 		A27CCF5A265DB6BC0014C65B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */; };
 		A27CCF5D265DBC9A0014C65B /* Moodboard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */; };
-		A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */; };
 		A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */; };
 		A27CCF62265DCC990014C65B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CCF61265DCC990014C65B /* Repository.swift */; };
 		A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */; };
@@ -51,12 +50,12 @@
 		FE126F9A265BCE0D0064F11D /* QuadrupleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F99265BCE0D0064F11D /* QuadrupleCell.swift */; };
 		FE126F9C265BCE270064F11D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F9B265BCE270064F11D /* Collection.swift */; };
 		FE126FA0265BEA840064F11D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F9F265BEA840064F11D /* RootView.swift */; };
+		FE729012265ED73900E66D1B /* MoodboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE729011265ED73900E66D1B /* MoodboardViewModel.swift */; };
+		FE729015265F06A400E66D1B /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE729014265F06A400E66D1B /* NetworkWorker.swift */; };
+		FE729018265F19C100E66D1B /* MoodboardMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE729017265F19C100E66D1B /* MoodboardMedia.swift */; };
 		FE754096265D27370059C0FE /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754095265D27370059C0FE /* Blur.swift */; };
-		FE754099265D34140059C0FE /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754098265D34140059C0FE /* TextAlert.swift */; };
-		FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409A265D34640059C0FE /* UIAlertController.swift */; };
-		FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409C265D347C0059C0FE /* AlertWrapper.swift */; };
-		FE75409F265D350A0059C0FE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409E265D350A0059C0FE /* ViewExtension.swift */; };
-		FE7540A1265D49A70059C0FE /* MoodboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7540A0265D49A70059C0FE /* MoodboardComponent.swift */; };
+		FEF37336265FDAB80064D0EA /* Moodboard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF37335265FDAB80064D0EA /* Moodboard+CoreDataProperties.swift */; };
+		FEF3733B265FE6DA0064D0EA /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF3733A265FE6DA0064D0EA /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +103,6 @@
 		A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A27CCF5F265DCC7D0014C65B /* MoodboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardRepository.swift; sourceTree = "<group>"; };
 		A27CCF61265DCC990014C65B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A2DF7603265BCDC5009EF1C0 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -126,12 +124,12 @@
 		FE126F99265BCE0D0064F11D /* QuadrupleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrupleCell.swift; sourceTree = "<group>"; };
 		FE126F9B265BCE270064F11D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		FE126F9F265BEA840064F11D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FE729011265ED73900E66D1B /* MoodboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardViewModel.swift; sourceTree = "<group>"; };
+		FE729014265F06A400E66D1B /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
+		FE729017265F19C100E66D1B /* MoodboardMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardMedia.swift; sourceTree = "<group>"; };
 		FE754095265D27370059C0FE /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
-		FE754098265D34140059C0FE /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
-		FE75409A265D34640059C0FE /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
-		FE75409C265D347C0059C0FE /* AlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWrapper.swift; sourceTree = "<group>"; };
-		FE75409E265D350A0059C0FE /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		FE7540A0265D49A70059C0FE /* MoodboardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardComponent.swift; sourceTree = "<group>"; };
+		FEF37335265FDAB80064D0EA /* Moodboard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moodboard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FEF3733A265FE6DA0064D0EA /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +161,8 @@
 		A233DCD12657FD040055EAA9 = {
 			isa = PBXGroup;
 			children = (
+				FEF37335265FDAB80064D0EA /* Moodboard+CoreDataProperties.swift */,
 				A27CCF5B265DBC9A0014C65B /* Moodboard+CoreDataClass.swift */,
-				A27CCF5C265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift */,
 				A27CCF57265DB6A70014C65B /* Content+CoreDataProperties.swift */,
 				A27CCF4D265DB6200014C65B /* Content+CoreDataClass.swift */,
 				A233DCDC2657FD040055EAA9 /* App */,
@@ -267,7 +265,9 @@
 		A233DD14265801320055EAA9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FE729013265F019000E66D1B /* Workers */,
 				A233DD19265801950055EAA9 /* FileViewModels */,
+				FE729011265ED73900E66D1B /* MoodboardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -284,12 +284,12 @@
 		A233DD162658016D0055EAA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FE754097265D34050059C0FE /* Alert */,
 				FE126F91265BCCEE0064F11D /* Collection */,
 				FE754095265D27370059C0FE /* Blur.swift */,
 				A233DD1D265801A50055EAA9 /* FileComponents */,
 				A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */,
-				FE7540A0265D49A70059C0FE /* MoodboardComponent.swift */,
+				FEF3733A265FE6DA0064D0EA /* RemoteImage.swift */,
+				FE729017265F19C100E66D1B /* MoodboardMedia.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -354,15 +354,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		FE754097265D34050059C0FE /* Alert */ = {
+		FE729013265F019000E66D1B /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				FE754098265D34140059C0FE /* TextAlert.swift */,
-				FE75409A265D34640059C0FE /* UIAlertController.swift */,
-				FE75409C265D347C0059C0FE /* AlertWrapper.swift */,
-				FE75409E265D350A0059C0FE /* ViewExtension.swift */,
+				FE729014265F06A400E66D1B /* NetworkWorker.swift */,
 			);
-			path = Alert;
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +530,7 @@
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
 				D1F0D2662659C62C00E89B3D /* RoutesInformations.swift in Sources */,
 				D1F0D26D2659CC6100E89B3D /* PixabayModel.swift in Sources */,
+				FEF37336265FDAB80064D0EA /* Moodboard+CoreDataProperties.swift in Sources */,
 				A27CCF5A265DB6BC0014C65B /* SwiftUIView.swift in Sources */,
 				A27CCF62265DCC990014C65B /* Repository.swift in Sources */,
 				A27CCF5D265DBC9A0014C65B /* Moodboard+CoreDataClass.swift in Sources */,
@@ -545,6 +543,7 @@
 				A27CCF56265DB6720014C65B /* ContentRepository.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
 				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
+				FE729015265F06A400E66D1B /* NetworkWorker.swift in Sources */,
 				D1CABB6F2659FC7900C03F10 /* PictureResponseData.swift in Sources */,
 				D1CABB712659FCD300C03F10 /* PoetryResponseData.swift in Sources */,
 				A2DF7604265BCDC5009EF1C0 /* PreferencesView.swift in Sources */,
@@ -552,23 +551,20 @@
 				A233DCE72657FD060055EAA9 /* Persistence.swift in Sources */,
 				FE126F9C265BCE270064F11D /* Collection.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
+				FEF3733B265FE6DA0064D0EA /* RemoteImage.swift in Sources */,
 				A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */,
-				FE754099265D34140059C0FE /* TextAlert.swift in Sources */,
-				FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */,
-				FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */,
 				FE126F9A265BCE0D0064F11D /* QuadrupleCell.swift in Sources */,
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
 				FE754096265D27370059C0FE /* Blur.swift in Sources */,
 				FE126F98265BCDF20064F11D /* TripleCell.swift in Sources */,
 				FE126F94265BCDCC0064F11D /* SingleCell.swift in Sources */,
+				FE729012265ED73900E66D1B /* MoodboardViewModel.swift in Sources */,
 				FE126F90265BCCCA0064F11D /* MoodboardView.swift in Sources */,
+				FE729018265F19C100E66D1B /* MoodboardMedia.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
-				FE75409F265D350A0059C0FE /* ViewExtension.swift in Sources */,
-				FE7540A1265D49A70059C0FE /* MoodboardComponent.swift in Sources */,
 				FE126F96265BCDDF0064F11D /* DoubleCell.swift in Sources */,
 				FE126FA0265BEA840064F11D /* RootView.swift in Sources */,
 				A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */,
-				A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */,
 				A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

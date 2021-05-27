@@ -7,22 +7,27 @@
 
 import SwiftUI
 
-struct TripleCell<Content: View>: View, Identifiable {
-    enum Direction {
-        case north, east, south, west
-    }
+enum Direction: Int, CaseIterable {
+    case north, east, south, west
+}
 
+struct TripleCell<Content: View>: View, Identifiable {
     let index: Int
     var id: Int { index }
 
     let direction: Direction
-    let content: (Int, Int) -> Content
+
+    let firstContent: Content
+    let secondContent: Content
+    let thirdContent: Content
 
     init(_ index: Int, _ direction: Direction,
-         @ViewBuilder _ content: @escaping (Int, Int) -> Content) {
+         firstContent: Content, secondContent: Content, thirdContent: Content) {
         self.index = index
         self.direction = direction
-        self.content = content
+        self.firstContent = firstContent
+        self.secondContent = secondContent
+        self.thirdContent = thirdContent
     }
 
     var body: some View {
@@ -30,33 +35,33 @@ struct TripleCell<Content: View>: View, Identifiable {
         case .north:
             VStack {
                 HStack {
-                    content(self.index, 0)
-                    content(self.index, 1)
+                    firstContent
+                    secondContent
                 }
-                content(self.index, 2)
+                thirdContent
             }
         case .east:
             HStack {
                 VStack {
-                    content(self.index, 0)
-                    content(self.index, 1)
+                    firstContent
+                    secondContent
                 }
-                content(self.index, 2)
+                thirdContent
             }
         case .south:
             VStack {
-                content(self.index, 0)
+                firstContent
                 HStack {
-                    content(self.index, 1)
-                    content(self.index, 2)
+                    secondContent
+                    thirdContent
                 }
             }
         case .west:
             HStack {
-                content(self.index, 0)
+                firstContent
                 VStack {
-                    content(self.index, 1)
-                    content(self.index, 2)
+                    secondContent
+                    thirdContent
                 }
             }
         }

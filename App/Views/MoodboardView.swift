@@ -15,6 +15,8 @@ struct MoodboardView: View {
     private var navigationTitle: String
     private var displayMode: NavigationBarItem.TitleDisplayMode
 
+    @ObservedObject var viewModel: MoodboardViewModel = MoodboardViewModel()
+
     init() {
         if UIDevice.current.userInterfaceIdiom == .phone {
             self.displayMode = .automatic
@@ -26,9 +28,10 @@ struct MoodboardView: View {
     }
 
     var body: some View {
-        MoodboardComponent(content: { index in
-            self.generateRandomCell(for: index)
-        })
+        Collection(viewModel.contentsDataSource.count, spacing: 8) { index in
+            self.createCell(for: index)
+        }
+        .padding(.horizontal, 8)
         .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(displayMode)
         .toolbar(content: self.createToolBarMenu)
@@ -98,24 +101,8 @@ struct MoodboardView: View {
         })
     }
 
-    @ViewBuilder private func contentForCell(at index: Int, itemIndex: Int) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 8)
-            Text("\(index) - \(itemIndex)").foregroundColor(.black)
-        }
-    }
-
-    @ViewBuilder private func generateRandomCell(for index: Int) -> some View {
-        switch CellLayout(rawValue: Int.random(in: 0..<4)) {
-        case.single:
-            SingleCell(index, self.contentForCell)
-        case .double:
-            DoubleCell(index, .vertical, self.contentForCell)
-        case .triple:
-            TripleCell(index, .north, self.contentForCell)
-        default:
-            QuadrupleCell(index, self.contentForCell)
-        }
+    @ViewBuilder private func createCell(for index: Int) -> some View {
+        RoundedRectangle(cornerRadius: 16)
     }
 }
 

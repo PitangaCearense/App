@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Content" representedClassName="Content" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="data" optional="YES" attributeType="String"/>
@@ -13,14 +13,14 @@
     </entity>
     <entity name="Moodboard" representedClassName="Moodboard" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="data" optional="YES" attributeType="Transformable"/>
+        <attribute name="data" optional="YES" attributeType="Transformable" customClassName="[NSManagedObjectID]"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="moodboardDay" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Content" positionX="-27" positionY="27" width="128" height="119"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Moodboard" positionX="0" positionY="99" width="128" height="104"/>
     </elements>
 </model>

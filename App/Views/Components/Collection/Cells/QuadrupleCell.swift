@@ -11,23 +11,30 @@ struct QuadrupleCell<Content: View>: View, Identifiable {
     let index: Int
     var id: Int { index }
 
-    let content: (Int, Int) -> Content
+    let firstContent: Content
+    let secondContent: Content
+    let thirdContent: Content
+    let fourthContent: Content
 
     init(_ index: Int,
-         @ViewBuilder _ content: @escaping (Int, Int) -> Content) {
+         firstContent: Content, secondContent: Content,
+         thirdContent: Content, fourthContent: Content) {
         self.index = index
-        self.content = content
+        self.firstContent = firstContent
+        self.secondContent = secondContent
+        self.thirdContent = thirdContent
+        self.fourthContent = thirdContent
     }
 
     var body: some View {
         VStack {
             HStack {
-                content(self.index, 0)
-                content(self.index, 1)
+                firstContent
+                secondContent
             }
             HStack {
-                content(self.index, 2)
-                content(self.index, 3)
+                thirdContent
+                fourthContent
             }
         }
     }
