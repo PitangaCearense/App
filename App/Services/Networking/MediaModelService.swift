@@ -31,15 +31,7 @@ class MediaModelService {
                     result(.failure(.badData))
                     return
                 }
-
-                AF.download(unwrappedPhotos.imageSource).responseData {
-                    guard let imageData = $0.value else {
-                        result(.failure(.badData))
-                        return
-                    }
-
-                    result(.success(ImageAndVideoResponseData(author: unwrappedauthor, data: imageData)))
-                }
+                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, url: unwrappedPhotos.imageSource)))
 
             case .video:
                 guard let randomResponse = apiResponse.videos?.randomElement(),
@@ -48,8 +40,7 @@ class MediaModelService {
                     result(.failure(.badData))
                     return
                 }
-
-                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, data: unwrappedVideoUrl.data(using: .utf8)!)))
+                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, url: unwrappedVideoUrl)))
             }
         }
     }
@@ -66,15 +57,7 @@ class MediaModelService {
                 result(.failure(.badData))
                 return
             }
-
-            AF.download(unwrappedPictures.pictureUrl).responseData {
-                guard let imageData = $0.value else {
-                    result(.failure(.badData))
-                    return
-                }
-
-                result(.success(PictureResponseData(title: unwrappedTitle, data: imageData)))
-            }
+            result(.success(PictureResponseData(title: unwrappedTitle, url: unwrappedPictures.pictureUrl)))
         }
     }
 
@@ -89,10 +72,8 @@ class MediaModelService {
                 result(.failure(.badData))
                 return
             }
-
-            result(.success(PoetryResponseData(title: unwrappedTitle,
-                                               author: unwrappedAuthor,
-                                               poetry: (unwrappedPoetry.lines.reduce("", { $0 + "\n" + $1 }).data(using: .utf8)!))))
+            result(.success(PoetryResponseData(titleAndAuthor: unwrappedTitle + "\n" + unwrappedAuthor,
+                                               poetry: (unwrappedPoetry.lines.reduce("", { $0 + "\n" + $1 })))))
         }
     }
 
