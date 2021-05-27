@@ -10,7 +10,7 @@ import CoreData
 class MoodboardRepository: Repository {
     let coreDataService: CoredataService<Moodboard> = CoredataService<Moodboard>()
 
-    func create(name: String? = nil, data: [NSManagedObjectID],
+    func create(name: String? = nil, data: [NSManagedObjectID] = [],
                 favorite: Bool = false, moodboardDay: Bool = false) -> Moodboard? {
         let moodboard = coreDataService.create()
 
@@ -20,7 +20,6 @@ class MoodboardRepository: Repository {
         moodboard?.moodboardDay = moodboardDay
         moodboard?.data = data
 
-        _ = coreDataService.save()
         return moodboard
     }
 
@@ -50,7 +49,7 @@ class MoodboardRepository: Repository {
     }
 
     func moodboardOfTheDay() -> Moodboard? {
-        let predicate = NSPredicate(format: "moodboardDay == YES AND creationDate == %@", Date() as CVarArg)
+        let predicate = NSPredicate(format: "moodboardDay == YES")
         guard let content = coreDataService.searchFor(predicate: predicate) else {return nil}
 
         return content.first
@@ -63,27 +62,29 @@ class MoodboardRepository: Repository {
         return content
     }
 
-    func favoriteMoodboard(moodboard: Moodboard, name: String) {
+    func favoriteMoodboard(moodboard: Moodboard, name: String) -> Bool {
         moodboard.name = name
         moodboard.favorite = true
-        _ = self.coreDataService.save()
+        return self.coreDataService.save()
     }
 
-    func unfavoriteMoodboard(moodboard: Moodboard) {
+    func unfavoriteMoodboard(moodboard: Moodboard) -> Bool {
         moodboard.favorite = false
         if !moodboard.moodboardDay {
             self.delete(identifier: [moodboard.objectID])
         }
-        _ = self.coreDataService.save()
+        return self.coreDataService.save()
     }
 
     func refreshMoodboard(moodboard: Moodboard, newData: [NSManagedObjectID]) -> Moodboard? {
         if moodboard.favorite {
-            guard let newMoodboard = self.create(name: nil, data: newData, moodboardDay: true) else {return nil}
+            guard let newMoodboard = self.create(name: nil, moodboardDay: true) else { return nil }
 
             moodboard.moodboardDay = false
+
             return newMoodboard
         }
+
         moodboard.data = newData
         return moodboard
     }

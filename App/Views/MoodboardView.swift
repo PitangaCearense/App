@@ -36,6 +36,9 @@ struct MoodboardView: View {
         .navigationBarTitleDisplayMode(displayMode)
         .toolbar(content: self.createToolBarMenu)
         .sheet(isPresented: $showSheet, content: self.sheetView)
+        .onAppear {
+            self.viewModel.loadDataSource()
+        }
     }
 
     private func sheetView() -> some View {
@@ -64,7 +67,7 @@ struct MoodboardView: View {
     private func saveFavorite() {
         self.dismiss()
         self.isFavorite = true
-        print(self.favoriteName)
+        _ = self.viewModel.favoriteMoodboard(with: self.favoriteName)
     }
 
     private func dismiss() {
@@ -74,14 +77,14 @@ struct MoodboardView: View {
     private func shoudCallAlert() {
         if self.isFavorite {
             self.isFavorite = false
-            print("Unfavorite Moodboard...")
+            _ = self.viewModel.unfavoriteMoodBoard()
         } else {
             self.showSheet = true
         }
     }
 
     private func refresh() {
-        print("Refresh...")
+        self.viewModel.refreshMoodBoard()
     }
 
     @ViewBuilder private func createToolBarMenu() -> some View {
@@ -101,8 +104,8 @@ struct MoodboardView: View {
         })
     }
 
-    @ViewBuilder private func createCell(for index: Int) -> some View {
-        RoundedRectangle(cornerRadius: 16)
+    private func createCell(for index: Int) -> some View {
+        return self.viewModel.contentsDataSource[index].clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
 

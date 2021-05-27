@@ -14,7 +14,6 @@ class CategoryRepository: Repository {
         let category = coreDataService.create()
         category?.selecteds = [Int]()
 
-        _ = coreDataService.save()
         return category
     }
 
@@ -31,12 +30,10 @@ class CategoryRepository: Repository {
     func addCategory(categoryId: Int) -> Category {
         if let category = self.read() {
             category.selecteds?.append(categoryId)
-            _ = coreDataService.save()
             return category
         }
         let newCategory = self.create()
         newCategory?.selecteds = [categoryId]
-        _ = coreDataService.save()
         return newCategory!
     }
 
@@ -44,7 +41,6 @@ class CategoryRepository: Repository {
         let category = self.read()
         if let index = category?.selecteds?.firstIndex(where: {$0 == categoryId}) {
             category?.selecteds?.remove(at: index)
-            _ = coreDataService.save()
         }
         return category!
     }

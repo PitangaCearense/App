@@ -19,7 +19,7 @@ struct Collection<Content>: View where Content: View {
     private let screenSize: CGSize = UIScreen.main.bounds.size
 
     private var items: [GridItem] = [
-        GridItem(.adaptive(minimum: 100, maximum: 200))
+        GridItem(.adaptive(minimum: 190, maximum: 400))
     ]
 
     let cellForIndex: (Int) -> Content

@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 // swiftlint:disable force_try
+// swiftlint:disable line_length
 
 class MediaModelService {
     var headers: HTTPHeaders?
@@ -61,7 +62,7 @@ class MediaModelService {
         }
     }
 
-    func getPoetryResponse<T: ResponsePoetryProtocol>(for url: Routes, model: T.Type, result: @escaping  (Result<PoetryResponseData, NetworkErrors>) -> ()) {
+    func getPoetryResponse<T: ResponsePoetryProtocol>(for url: Routes, model: T.Type, result: @escaping  (Result<PoetryResponseData, NetworkErrors>) -> Void) {
 
         AF.request(url.rawValue).responseDecodable(of: [T].self) { response in
             let apiResponse = try! JSONDecoder().decode([T].self, from: response.data!)

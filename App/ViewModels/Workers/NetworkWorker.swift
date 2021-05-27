@@ -9,84 +9,61 @@ import Foundation
 
 class NetworkWorker {
     private lazy var services: [MediaModelService] = []
-    private let preferences: [Categories]
+    private var categories: [Categories] = []
 
-    private lazy var photoResponse: [ImageAndVideoResponseData] = []
-    private lazy var videoResponse: [ImageAndVideoResponseData] = []
-    private lazy var paintingResponse: [PictureResponseData] = []
-    private lazy var poetryResponse: [PoetryResponseData] = []
+    weak var delegate: NetworkWorkerDelegate?
+
+    private let categoryRepository: CategoryRepository = CategoryRepository()
 
     init() {
-        self.preferences = Categories.allCases
+        self.loadCategories()
         self.createServices()
     }
 
+    private func loadCategories() {
+        if let data = self.categoryRepository.read(),
+           let rawCategories = data.selecteds {
+            for rawCategory in rawCategories {
+                if let category = Categories(rawValue: rawCategory) {
+                    self.categories.append(category)
+                }
+            }
+        }
+    }
+
     private func createServices() {
-        for preference in preferences {
-            services.append(MediaModelService(category: preference.category.name))
+        for category in self.categories {
+            services.append(MediaModelService(category: category.category.name))
         }
     }
 
     func request() {
         for service in services {
-            service.getMediaResponse(for: .pexelsImage, model: PexelsModel.self,
-                                     mediaType: .image, result: self.receivePhoto)
+//            service.getMediaResponse(for: .pexelsImage, model: PexelsModel.self,
+//                                     mediaType: .image, result: self.sendPhoto)
             service.getMediaResponse(for: .pixabayImage, model: PixabayModel.self,
-                                     mediaType: .image, result: self.receivePhoto)
+                                     mediaType: .image, result: self.sendPhoto)
 
-            service.getMediaResponse(for: .pexelsVideo, model: PexelsModel.self,
-                                     mediaType: .video, result: self.receiveVideo)
-            service.getMediaResponse(for: .pixabayVideo, model: PixabayModel.self,
-                                     mediaType: .video, result: self.receiveVideo)
-        }
-    }
-}
-
-extension NetworkWorker: MediaModelServiceDelegate {
-    func receivePhoto(result: Result<ImageAndVideoResponseData, NetworkErrors>) {
-        switch result {
-        case .success(let data):
-            self.photoResponse.append(data)
-        default:
-            return
+//            service.getMediaResponse(for: .pexelsVideo, model: PexelsModel.self,
+//                                     mediaType: .video, result: self.sendVieo)
+//            service.getMediaResponse(for: .pixabayVideo, model: PixabayModel.self,
+//                                     mediaType: .video, result: self.receiveVideo)
         }
     }
 
-    func receiveVideo(result: Result<ImageAndVideoResponseData, NetworkErrors>) {
-        switch result {
-        case .success(let data):
-            self.videoResponse.append(data)
-        default:
-            return
-        }
+    func sendPhoto(result: Result<ImageAndVideoResponseData, NetworkErrors>) {
+        delegate?.receivePhoto(result: result)
     }
 
-    func receivePoetry(result: Result<PoetryResponseData, NetworkErrors>) {
-        switch result {
-        case .success(let data):
-            self.poetryResponse.append(data)
-        default:
-            return
-        }
+    func sendVideo(result: Result<ImageAndVideoResponseData, NetworkErrors>) {
+        delegate?.receiveVideo(result: result)
     }
 
-    func receivePainting(result: Result<PictureResponseData, NetworkErrors>) {
-        switch result {
-        case .success(let data):
-            self.paintingResponse.append(data)
-        default:
-            return
-        }
+    func sendPoetry(result: Result<PoetryResponseData, NetworkErrors>) {
+        self.delegate?.receivePoetry(result: result)
     }
-    
-    
-}
 
-
-
-protocol MediaModelServiceDelegate {
-    func receivePhoto(result: Result<ImageAndVideoResponseData, NetworkErrors>)
-    func receiveVideo(result: Result<ImageAndVideoResponseData, NetworkErrors>)
-    func receivePoetry(result: Result<PoetryResponseData, NetworkErrors>)
-    func receivePainting(result: Result<PictureResponseData, NetworkErrors>)
+    func sendPainting(result: Result<PictureResponseData, NetworkErrors>) {
+        delegate?.receivePainting(result: result)
+    }
 }

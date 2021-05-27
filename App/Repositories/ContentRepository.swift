@@ -19,12 +19,11 @@ class ContentRepository: Repository {
 
         content?.name = name
         content?.author = author
-        content?.date = Date()
+        content?.date = nil
         content?.resource = resource
         content?.type = type
         content?.data = data
 
-        _ = coreDataService.save()
         return content
     }
 
