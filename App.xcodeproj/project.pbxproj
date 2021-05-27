@@ -37,6 +37,8 @@
 		A2F6DF42265EEF5B00F43692 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF41265EEF5B00F43692 /* CategoryRepository.swift */; };
 		A2F6DF44265EFAFB00F43692 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF43265EFAFB00F43692 /* Category+CoreDataProperties.swift */; };
 		A2F6DF46265F112600F43692 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */; };
+		D151B1BD26600BB0006BFA8B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D151B1BC26600BB0006BFA8B /* FavoritesView.swift */; };
+		D151B1BF26600CA2006BFA8B /* MiniMoodboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D151B1BE26600CA2006BFA8B /* MiniMoodboard.swift */; };
 		D1A2B075265BC8F900DAB80F /* MediaModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2B074265BC8F900DAB80F /* MediaModelService.swift */; };
 		D1CABB6D2659FC3B00C03F10 /* ImageAndVideoResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB6C2659FC3B00C03F10 /* ImageAndVideoResponseData.swift */; };
 		D1CABB6F2659FC7900C03F10 /* PictureResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB6E2659FC7900C03F10 /* PictureResponseData.swift */; };
@@ -117,6 +119,8 @@
 		A2F6DF41265EEF5B00F43692 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		A2F6DF43265EFAFB00F43692 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		D151B1BC26600BB0006BFA8B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		D151B1BE26600CA2006BFA8B /* MiniMoodboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMoodboard.swift; sourceTree = "<group>"; };
 		D1A2B074265BC8F900DAB80F /* MediaModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModelService.swift; sourceTree = "<group>"; };
 		D1CABB6C2659FC3B00C03F10 /* ImageAndVideoResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndVideoResponseData.swift; sourceTree = "<group>"; };
 		D1CABB6E2659FC7900C03F10 /* PictureResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureResponseData.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 				FE126F8F265BCCCA0064F11D /* MoodboardView.swift */,
 				FE126F9F265BEA840064F11D /* RootView.swift */,
 				A27CCF59265DB6BC0014C65B /* SwiftUIView.swift */,
+				D151B1BC26600BB0006BFA8B /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				A233DD1D265801A50055EAA9 /* FileComponents */,
 				A2DF7605265BD5A7009EF1C0 /* CustomButtonView.swift */,
 				FE7540A0265D49A70059C0FE /* MoodboardComponent.swift */,
+				D151B1BE26600CA2006BFA8B /* MiniMoodboard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -556,6 +562,7 @@
 				D1F0D26B2659C94F00E89B3D /* PexelsModel.swift in Sources */,
 				A2F6DF42265EEF5B00F43692 /* CategoryRepository.swift in Sources */,
 				D1FF1616265D38FA00ED6A7B /* ResponseProtocols.swift in Sources */,
+				D151B1BF26600CA2006BFA8B /* MiniMoodboard.swift in Sources */,
 				A27CCF56265DB6720014C65B /* ContentRepository.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
 				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
@@ -583,6 +590,7 @@
 				FE126F96265BCDDF0064F11D /* DoubleCell.swift in Sources */,
 				FE126FA0265BEA840064F11D /* RootView.swift in Sources */,
 				A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */,
+				D151B1BD26600BB0006BFA8B /* FavoritesView.swift in Sources */,
 				A27CCF5E265DBC9A0014C65B /* Moodboard+CoreDataProperties.swift in Sources */,
 				A27CCF60265DCC7D0014C65B /* MoodboardRepository.swift in Sources */,
 				A2F6DF44265EFAFB00F43692 /* Category+CoreDataProperties.swift in Sources */,
