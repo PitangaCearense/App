@@ -8,7 +8,6 @@
 import Foundation
 
 struct PoetryResponseData {
-    let title: String
-    let author: String
-    let poetry: Data
+    let titleAndAuthor: String
+    let poetry: String
 }
