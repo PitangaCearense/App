@@ -16,16 +16,31 @@ enum MoodboardMedia {
 
 extension MoodboardMedia: View {
     var body: some View {
-        switch self {
-        case .image(_, let url):
-            return AnyView(RemoteImage(url: url).aspectRatio(contentMode: .fill))
-        case .video(_, let url):
-            return AnyView(VideoPlayer(player: AVPlayer(url: URL(string: url)!)))
-        case .text(let title, let poem):
-            return AnyView(VStack {
-                Text(title).font(.title2)
-                Text(poem)
-            })
+        GeometryReader { geo in
+            switch self {
+            case .image(_, let url):
+                RemoteImage(url: url)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .aspectRatio(contentMode: .fill)
+            case .video(_, let url):
+                VideoPlayer(player: AVPlayer(url: URL(string: url)!))
+                    .frame(width: geo.size.width, height: geo.size.height)
+            case .text(let title, let poem):
+                VStack {
+                    Text(title).font(.title2)
+                    Text(poem)
+                }
+                .frame(width: geo.size.width, height: geo.size.height)
+            }
+        }.onTapGesture {
+            switch self {
+            case .image(_,let url):
+                fallthrough
+            case .video(_,let url):
+                fallthrough
+            case .text(_,let url):
+                print(url)
+            }
         }
     }
 }

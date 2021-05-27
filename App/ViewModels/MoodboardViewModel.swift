@@ -20,20 +20,15 @@ class MoodboardViewModel: ObservableObject {
     init() {
         self.moodboardRepository = MoodboardRepository()
         self.contentsRepository = ContentRepository()
+    
+        self.loadDataSource()
     }
 
     func loadDataSource() {
-        if let moodboard = self.moodboardRepository.moodboardOfTheDay(),
-           let ids = moodboard.data {
-            self.moodboard = moodboard
-            self.contentsDataSource = self.contentsRepository.searchBy(ids: ids)
-                .compactMap(self.coreDataToMoodboardMedia)
-        } else {
-            if let newMoodboard = self.moodboardRepository.create(moodboardDay: true) {
-                self.moodboard = newMoodboard
-                self.networkWorker.delegate = self
-                self.networkWorker.request()
-            }
+        if let newMoodboard = self.moodboardRepository.create(moodboardDay: true) {
+            self.moodboard = newMoodboard
+            self.networkWorker.delegate = self
+            self.networkWorker.request()
         }
     }
 

@@ -14,14 +14,6 @@ struct AppApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .onReceive(
-                    NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-                    do {
-                        try PersistenceController.shared.container.viewContext.save()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
         }
     }
 }

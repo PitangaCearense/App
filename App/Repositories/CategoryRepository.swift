@@ -34,6 +34,7 @@ class CategoryRepository: Repository {
         }
         let newCategory = self.create()
         newCategory?.selecteds = [categoryId]
+
         return newCategory!
     }
 
@@ -42,6 +43,7 @@ class CategoryRepository: Repository {
         if let index = category?.selecteds?.firstIndex(where: {$0 == categoryId}) {
             category?.selecteds?.remove(at: index)
         }
+
         return category!
     }
 }

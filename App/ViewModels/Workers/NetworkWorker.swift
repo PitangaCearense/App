@@ -15,11 +15,6 @@ class NetworkWorker {
 
     private let categoryRepository: CategoryRepository = CategoryRepository()
 
-    init() {
-        self.loadCategories()
-        self.createServices()
-    }
-
     private func loadCategories() {
         if let data = self.categoryRepository.read(),
            let rawCategories = data.selecteds {
@@ -31,23 +26,31 @@ class NetworkWorker {
         }
     }
 
-    private func createServices() {
-        for category in self.categories {
-            services.append(MediaModelService(category: category.category.name))
+    func request() {
+        self.loadCategories()
+
+        if let category = self.categories.randomElement() {
+            if category == .art {
+                let service = MediaModelService(category: category.category.name)
+                self.createMoodboardOfPaintings(with: service)
+            } else {
+                let service = MediaModelService(category: category.category.name)
+                self.createMoodboardOfImages(with: service)
+            }
         }
     }
 
-    func request() {
-        for service in services {
-//            service.getMediaResponse(for: .pexelsImage, model: PexelsModel.self,
-//                                     mediaType: .image, result: self.sendPhoto)
+    private func createMoodboardOfPaintings(with service: MediaModelService) {
+        for _ in 0..<30 {
+            service.getPictureResponse(for: .rijksmuseum, model: RijksmuseumModel.self,
+                                       result: self.sendPainting)
+        }
+    }
+
+    private func createMoodboardOfImages(with service: MediaModelService) {
+        for _ in 0..<30 {
             service.getMediaResponse(for: .pixabayImage, model: PixabayModel.self,
                                      mediaType: .image, result: self.sendPhoto)
-
-//            service.getMediaResponse(for: .pexelsVideo, model: PexelsModel.self,
-//                                     mediaType: .video, result: self.sendVieo)
-//            service.getMediaResponse(for: .pixabayVideo, model: PixabayModel.self,
-//                                     mediaType: .video, result: self.receiveVideo)
         }
     }
 

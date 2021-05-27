@@ -19,7 +19,7 @@ struct Collection<Content>: View where Content: View {
     private let screenSize: CGSize = UIScreen.main.bounds.size
 
     private var items: [GridItem] = [
-        GridItem(.adaptive(minimum: 190, maximum: 400))
+        GridItem(.adaptive(minimum: 190, maximum: 200))
     ]
 
     let cellForIndex: (Int) -> Content
@@ -36,6 +36,7 @@ struct Collection<Content>: View where Content: View {
                 ForEach(0..<self.numberOfItems, id: \.self) { index in
                     self.cellForIndex(index)
                         .frame(idealWidth: 190, idealHeight: 190)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             }
         }

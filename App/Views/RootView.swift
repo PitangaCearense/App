@@ -12,14 +12,6 @@ struct RootView: View {
     private let moodBoardView = MoodboardView()
     private let preferencesView = PreferencesView()
 
-    init() {
-//        UINavigationBar.appearance().barTintColor = .black
-//        UINavigationBar.appearance().backgroundColor = .black
-//        UINavigationBar.appearance().isTranslucent = false
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UITabBar.appearance().backgroundColor = .black
-    }
-
     var body: some View {
         configure()
             .accentColor(Color.white)
@@ -43,11 +35,6 @@ struct RootView: View {
                 NavigationLink(destination: self.preferencesView) {
                     Label("Preferences", systemImage: "gear")
                 }
-                Section(header: Text("Favorites")) {
-                    NavigationLink("Favorite 1", destination: ContentView())
-                    NavigationLink("Favorite 2", destination: ContentView())
-                    NavigationLink("Favorite 3", destination: ContentView())
-                }
             }
             .accentColor(Color(.systemGray2))
             .listStyle(SidebarListStyle())
@@ -62,10 +49,6 @@ struct RootView: View {
             NavigationView { moodBoardView.navigationTitle("Moodboard") }
                 .tabItem {
                     Label("Moodboard", systemImage: "square.grid.2x2")
-                }
-            NavigationView { ContentView().navigationTitle("Favorites") }
-                .tabItem {
-                    Label("Favorites", systemImage: "photo.on.rectangle.angled")
                 }
             NavigationView { self.preferencesView.navigationTitle("Preferences") }
                 .tabItem {

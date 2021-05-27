@@ -9,7 +9,7 @@ import Foundation
 
 struct RijksmuseumModel: ResponsePictureProtocol, Codable {
     let artObjects: [ArtObject]
-    
+
     var picture: [ArtObject]? { artObjects.filter{ $0.title != nil }}
 }
 
@@ -17,8 +17,8 @@ struct ArtObject: MediaInformation, PictureData, Codable {
     var author: String?
     var title: String?
     let webImage: Picture
-    
-    var pictureUrl: String { return webImage.url }
+
+    var pictureUrl: String? { return webImage.url }
 }
 
 struct Picture: Codable {

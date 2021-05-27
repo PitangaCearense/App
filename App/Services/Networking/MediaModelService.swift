@@ -58,7 +58,7 @@ class MediaModelService {
                 result(.failure(.badData))
                 return
             }
-            result(.success(PictureResponseData(title: unwrappedTitle, url: unwrappedPictures.pictureUrl)))
+            result(.success(PictureResponseData(title: unwrappedTitle, url: unwrappedPictures.pictureUrl!)))
         }
     }
 
@@ -88,7 +88,7 @@ class MediaModelService {
             headers = []
         } else if url == Routes.rijksmuseum {
             parameters = ["key": Tokens.rijksmuseum.rawValue,
-                          "technique": "painting",
+                          "imgonly": "True",
                           "p": "\(Int.random(in: 1..<1000))"]
         }
     }
