@@ -9,12 +9,20 @@ import SwiftUI
 
 struct SwiftUIView: View {
     @State private var contents: [Content] = {
-         let viewModel = ContentRepository()
+         let viewModel = CategoryRepository()
 //         viewModel.create()
-         let result = viewModel.readAll()
-//        let serv = CoredataService<Content>()
+//         let result = viewModel.readAll()
+//        let serv = CoredataService<Category>()
+//        viewModel.addCategory(categoryId: 5)
+//        viewModel.addCategory(categoryId: 6)
+//        viewModel.addCategory(categoryId: 7)
+//        viewModel.addCategory(categoryId: 1)
+//        viewModel.addCategory(categoryId: 3)
+        viewModel.removeCategory(categoryId: 6)
+        let retorno = viewModel.readAll()
+    
 //        serv.deleteAll()
-         return result!
+         return []
      }()
 
     var body: some View {

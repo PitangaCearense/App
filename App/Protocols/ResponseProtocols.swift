@@ -10,7 +10,7 @@ import Foundation
 protocol ResponseMediaProtocol: Codable {
     associatedtype Images: MediaInformation, ImageData
     associatedtype Videos: MediaInformation, VideoData
-    
+
     var photos: [Images]? { get }
     var videos: [Videos]? { get }
 }
@@ -30,7 +30,7 @@ protocol VideoData: Codable {
 
 protocol ResponsePictureProtocol: Codable {
     associatedtype Picture: MediaInformation, PictureData
-    
+
     var picture: [Picture]? { get }
 }
 
