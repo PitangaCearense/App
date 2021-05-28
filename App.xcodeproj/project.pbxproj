@@ -60,10 +60,7 @@
 		FE126F9C265BCE270064F11D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F9B265BCE270064F11D /* Collection.swift */; };
 		FE126FA0265BEA840064F11D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE126F9F265BEA840064F11D /* RootView.swift */; };
 		FE754096265D27370059C0FE /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754095265D27370059C0FE /* Blur.swift */; };
-		FE754099265D34140059C0FE /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754098265D34140059C0FE /* TextAlert.swift */; };
-		FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409A265D34640059C0FE /* UIAlertController.swift */; };
-		FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409C265D347C0059C0FE /* AlertWrapper.swift */; };
-		FE75409F265D350A0059C0FE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75409E265D350A0059C0FE /* ViewExtension.swift */; };
+		FEC18B3A26611BAA00397887 /* RootViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC18B3926611BAA00397887 /* RootViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,10 +139,7 @@
 		FE126F9B265BCE270064F11D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		FE126F9F265BEA840064F11D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FE754095265D27370059C0FE /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
-		FE754098265D34140059C0FE /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
-		FE75409A265D34640059C0FE /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
-		FE75409C265D347C0059C0FE /* AlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWrapper.swift; sourceTree = "<group>"; };
-		FE75409E265D350A0059C0FE /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		FEC18B3926611BAA00397887 /* RootViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +292,7 @@
 				A2F6DF45265F112600F43692 /* PreferencesViewModel.swift */,
 				A228AD0E26606B2B00612C36 /* MoodboardViewModel.swift */,
 				D1CA0870266111F300BB359B /* FavoritesViewModel.swift */,
+				FEC18B3926611BAA00397887 /* RootViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -314,7 +309,6 @@
 		A233DD162658016D0055EAA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FE754097265D34050059C0FE /* Alert */,
 				FE126F91265BCCEE0064F11D /* Collection */,
 				FE754095265D27370059C0FE /* Blur.swift */,
 				A233DD1D265801A50055EAA9 /* FileComponents */,
@@ -373,17 +367,6 @@
 				FE126F9B265BCE270064F11D /* Collection.swift */,
 			);
 			path = Collection;
-			sourceTree = "<group>";
-		};
-		FE754097265D34050059C0FE /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				FE754098265D34140059C0FE /* TextAlert.swift */,
-				FE75409A265D34640059C0FE /* UIAlertController.swift */,
-				FE75409C265D347C0059C0FE /* AlertWrapper.swift */,
-				FE75409E265D350A0059C0FE /* ViewExtension.swift */,
-			);
-			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +554,7 @@
 				A27CCF56265DB6720014C65B /* ContentRepository.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
 				D1F0D2712659CF4200E89B3D /* PoetryDBModel.swift in Sources */,
+				FEC18B3A26611BAA00397887 /* RootViewViewModel.swift in Sources */,
 				D1CABB6F2659FC7900C03F10 /* PictureResponseData.swift in Sources */,
 				D1CABB712659FCD300C03F10 /* PoetryResponseData.swift in Sources */,
 				D1CA086F266111CD00BB359B /* FavoritesView.swift in Sources */,
@@ -584,15 +568,11 @@
 				FE126F9C265BCE270064F11D /* Collection.swift in Sources */,
 				A233DCEA2657FD060055EAA9 /* App.xcdatamodeld in Sources */,
 				A2DF7606265BD5A7009EF1C0 /* CustomButtonView.swift in Sources */,
-				FE754099265D34140059C0FE /* TextAlert.swift in Sources */,
-				FE75409B265D34640059C0FE /* UIAlertController.swift in Sources */,
-				FE75409D265D347C0059C0FE /* AlertWrapper.swift in Sources */,
 				A2F6DF46265F112600F43692 /* PreferencesViewModel.swift in Sources */,
 				A233DCE02657FD040055EAA9 /* ContentView.swift in Sources */,
 				FE754096265D27370059C0FE /* Blur.swift in Sources */,
 				FE126F90265BCCCA0064F11D /* MoodboardView.swift in Sources */,
 				A233DCDE2657FD040055EAA9 /* AppApp.swift in Sources */,
-				FE75409F265D350A0059C0FE /* ViewExtension.swift in Sources */,
 				FE126FA0265BEA840064F11D /* RootView.swift in Sources */,
 				A228AD20266078A000612C36 /* Moodboard+CoreDataProperties.swift in Sources */,
 				A27CCF4F265DB6200014C65B /* Content+CoreDataClass.swift in Sources */,
@@ -759,7 +739,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,7 +761,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

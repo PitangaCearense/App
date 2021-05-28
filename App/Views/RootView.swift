@@ -12,12 +12,12 @@ struct RootView: View {
     private let moodBoardView = MoodboardView()
     private let preferencesView = PreferencesView()
 
+    private let viewModel: RootViewViewModel
+    private let favorites: [String]
+
     init() {
-//        UINavigationBar.appearance().barTintColor = .black
-//        UINavigationBar.appearance().backgroundColor = .black
-//        UINavigationBar.appearance().isTranslucent = false
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UITabBar.appearance().backgroundColor = .black
+        self.viewModel = RootViewViewModel()
+        self.favorites = viewModel.favoriteList()
     }
 
     var body: some View {
@@ -45,8 +45,9 @@ struct RootView: View {
                 }
                 Section(header: Text("Favorites")) {
                     NavigationLink("All Favorites", destination: FavoritesView())
-                    NavigationLink("Favorite 2", destination: ContentView())
-                    NavigationLink("Favorite 3", destination: ContentView())
+                    List(0..<favorites.count, id: \.self) { index in
+                        NavigationLink(favorites[index], destination: FavoritesView())
+                    }
                 }
             }
             .accentColor(Color(.systemGray2))
