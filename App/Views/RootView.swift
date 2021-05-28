@@ -43,11 +43,11 @@ struct RootView: View {
                 NavigationLink(destination: self.preferencesView) {
                     Label("Preferences", systemImage: "gear")
                 }
-//                Section(header: Text("Favorites")) {
-//                    NavigationLink("Favorite 1", destination: ContentView())
-//                    NavigationLink("Favorite 2", destination: ContentView())
-//                    NavigationLink("Favorite 3", destination: ContentView())
-//                }
+                Section(header: Text("Favorites")) {
+                    NavigationLink("All Favorites", destination: FavoritesView())
+                    NavigationLink("Favorite 2", destination: ContentView())
+                    NavigationLink("Favorite 3", destination: ContentView())
+                }
             }
             .accentColor(Color(.systemGray2))
             .listStyle(SidebarListStyle())
@@ -63,10 +63,10 @@ struct RootView: View {
                 .tabItem {
                     Label("Moodboard", systemImage: "square.grid.2x2")
                 }
-//            NavigationView { ContentView().navigationTitle("Favorites") }
-//                .tabItem {
-//                    Label("Favorites", systemImage: "photo.on.rectangle.angled")
-//                }
+            NavigationView { FavoritesView().navigationTitle("Favorites") }
+                .tabItem {
+                    Label("Favorites", systemImage: "photo.on.rectangle.angled")
+                }
             NavigationView { self.preferencesView.navigationTitle("Preferences") }
                 .tabItem {
                     Label("Preferences", systemImage: "gear")
