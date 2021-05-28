@@ -18,7 +18,7 @@ struct ArtObject: MediaInformation, PictureData, Codable {
     var title: String?
     let webImage: Picture
     
-    var pictureUrl: String { return webImage.url }
+    var pictureUrl: String? { return webImage.url }
 }
 
 struct Picture: Codable {
