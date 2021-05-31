@@ -16,15 +16,17 @@ class ContentRepository: Repository {
             return content
         }
         let content = coreDataService.create()
-
+        
+        content?.identifier = UUID()
         content?.name = name
         content?.author = author
-        content?.date = Date()
+        content?.date = nil
         content?.resource = resource
         content?.type = type
         content?.data = data
 
         _ = coreDataService.save()
+        
         return content
     }
 
@@ -32,12 +34,12 @@ class ContentRepository: Repository {
         return coreDataService.read()
     }
 
-    func searchBy(ids: [NSManagedObjectID]) -> [Content] {
+    func searchBy(ids: [UUID]) -> [Content] {
         var results: [Content] = [Content]()
         var predicate: NSPredicate
 
         for identifier in ids {
-            predicate = NSPredicate(format: "objectID == %@", identifier)
+            predicate = NSPredicate(format: "identifier == %@", identifier as CVarArg)
             if let content = coreDataService.searchFor(predicate: predicate)?.first {
                 results.append(content)
             }
@@ -45,7 +47,7 @@ class ContentRepository: Repository {
         return results
     }
 
-    func delete(identifier contents: [NSManagedObjectID]) {
+    func delete(identifier contents: [UUID]) {
         let contents = self.searchBy(ids: contents)
 
         for content in contents {

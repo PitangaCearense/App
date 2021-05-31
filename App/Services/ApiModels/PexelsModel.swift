@@ -20,7 +20,7 @@ struct Photos: Codable, MediaInformation, ImageData {
     let src: SRC
     
     var imageSource: String {
-        return src.mediumUrl
+        return src.medium
     }
     
     enum CodingKeys: String, CodingKey {
@@ -30,7 +30,7 @@ struct Photos: Codable, MediaInformation, ImageData {
 }
 
 struct SRC: Codable {
-    let mediumUrl: String
+    let medium: String
 }
 
 // MARK: - Video flow

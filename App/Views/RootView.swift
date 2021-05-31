@@ -44,7 +44,7 @@ struct RootView: View {
                     Label("Preferences", systemImage: "gear")
                 }
                 Section(header: Text("Favorites")) {
-                    NavigationLink("Favorite 1", destination: ContentView())
+                    NavigationLink("All Favorites", destination: FavoritesView())
                     NavigationLink("Favorite 2", destination: ContentView())
                     NavigationLink("Favorite 3", destination: ContentView())
                 }
@@ -63,7 +63,7 @@ struct RootView: View {
                 .tabItem {
                     Label("Moodboard", systemImage: "square.grid.2x2")
                 }
-            NavigationView { ContentView().navigationTitle("Favorites") }
+            NavigationView { FavoritesView().navigationTitle("Favorites") }
                 .tabItem {
                     Label("Favorites", systemImage: "photo.on.rectangle.angled")
                 }

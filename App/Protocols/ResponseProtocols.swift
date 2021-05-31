@@ -35,7 +35,7 @@ protocol ResponsePictureProtocol: Codable {
 }
 
 protocol PictureData: Codable {
-    var pictureUrl: String { get }
+    var pictureUrl: String? { get }
 }
 
 protocol ResponsePoetryProtocol: MediaInformation {

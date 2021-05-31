@@ -9,5 +9,5 @@ import Foundation
 
 struct ImageAndVideoResponseData {
     let author: String
-    let data: Data
+    let url: String
 }

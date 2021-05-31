@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 // swiftlint:disable force_try
+// swiftlint:disable line_length
 
 class MediaModelService {
     var headers: HTTPHeaders?
@@ -31,15 +32,7 @@ class MediaModelService {
                     result(.failure(.badData))
                     return
                 }
-
-                AF.download(unwrappedPhotos.imageSource).responseData {
-                    guard let imageData = $0.value else {
-                        result(.failure(.badData))
-                        return
-                    }
-
-                    result(.success(ImageAndVideoResponseData(author: unwrappedauthor, data: imageData)))
-                }
+                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, url: unwrappedPhotos.imageSource)))
 
             case .video:
                 guard let randomResponse = apiResponse.videos?.randomElement(),
@@ -48,8 +41,7 @@ class MediaModelService {
                     result(.failure(.badData))
                     return
                 }
-
-                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, data: unwrappedVideoUrl.data(using: .utf8)!)))
+                result(.success(ImageAndVideoResponseData(author: unwrappedauthor, url: unwrappedVideoUrl)))
             }
         }
     }
@@ -66,19 +58,11 @@ class MediaModelService {
                 result(.failure(.badData))
                 return
             }
-
-            AF.download(unwrappedPictures.pictureUrl).responseData {
-                guard let imageData = $0.value else {
-                    result(.failure(.badData))
-                    return
-                }
-
-                result(.success(PictureResponseData(title: unwrappedTitle, data: imageData)))
-            }
+            result(.success(PictureResponseData(title: unwrappedTitle, url: unwrappedPictures.pictureUrl!)))
         }
     }
 
-    func getPoetryResponse<T: ResponsePoetryProtocol>(for url: Routes, model: T.Type, result: @escaping  (Result<PoetryResponseData, NetworkErrors>) -> ()) {
+    func getPoetryResponse<T: ResponsePoetryProtocol>(for url: Routes, model: T.Type, result: @escaping  (Result<PoetryResponseData, NetworkErrors>) -> Void) {
 
         AF.request(url.rawValue).responseDecodable(of: [T].self) { response in
             let apiResponse = try! JSONDecoder().decode([T].self, from: response.data!)
@@ -89,10 +73,8 @@ class MediaModelService {
                 result(.failure(.badData))
                 return
             }
-
-            result(.success(PoetryResponseData(title: unwrappedTitle,
-                                               author: unwrappedAuthor,
-                                               poetry: (unwrappedPoetry.lines.reduce("", { $0 + "\n" + $1 }).data(using: .utf8)!))))
+            result(.success(PoetryResponseData(titleAndAuthor: unwrappedTitle + "\n" + unwrappedAuthor,
+                                               poetry: (unwrappedPoetry.lines.reduce("", { $0 + "\n" + $1 })))))
         }
     }
 
@@ -106,7 +88,7 @@ class MediaModelService {
             headers = []
         } else if url == Routes.rijksmuseum {
             parameters = ["key": Tokens.rijksmuseum.rawValue,
-                          "technique": "painting",
+                          "imgonly": "True",
                           "p": "\(Int.random(in: 1..<1000))"]
         }
     }

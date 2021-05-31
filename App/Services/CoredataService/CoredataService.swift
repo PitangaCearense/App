@@ -24,6 +24,7 @@ class CoredataService<T: NSManagedObject> {
         guard let entity = NSEntityDescription.entity(forEntityName: T.entityName, in: persistentContainer.viewContext)
         else { return nil }
 
+//        _ = self.save()
         return T(entity: entity, insertInto: persistentContainer.viewContext)
     }
 
